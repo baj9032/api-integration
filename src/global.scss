@@ -1,0 +1,34 @@
+$border: 1px solid;
+
+.container {
+  padding: 10px;
+  margin: 5px;
+  .header {
+    border: $border;
+    border-style: dashed;
+    padding: 10px;
+    background-color: #a9a9a936;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1%;
+  }
+  .item {
+    border: $border;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .even {
+    background-color: rgba(169, 169, 169, 0.05);
+  }
+
+  .back {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="header">User List</div>
+  <div class="detail">
+    <div
+      class="item"
+      *ngFor="let user of userList; let odd = odd; let even = even"
+      (click)="navigateToAlbums(user.id)"
+      [ngClass]="{ odd: odd, even: even }"
+    >
+      <div>Name: {{ user.name }}</div>
+      <div>User Name: {{ user.username }}</div>
+      <div>Email: {{ user.email }}</div>
+    </div>
+  </div>
+</div>

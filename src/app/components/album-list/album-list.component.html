@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="header">
+    Album List
+    <span class="back" (click)="backToUserList()">Back To User List</span>
+  </div>
+  <div class="detail">
+    <div
+      class="item"
+      *ngFor="let album of albumList; let odd = odd; let even = even"
+      [ngClass]="{ odd: odd, even: even }"
+      (click)="navigateToPhotoGallary(album.id)"
+    >
+      <div>Name: {{ album.title }}</div>
+    </div>
+  </div>
+</div>

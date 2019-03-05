@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="header">
+    Photo Gallary
+    <span class="back" (click)="backToAlbumList()">Back To Album List</span>
+  </div>
+  <div class="detail">
+    <div
+      class="item"
+      *ngFor="let image of imageList; let odd = odd; let even = even"
+      [ngClass]="{ odd: odd, even: even }"
+    >
+      <img [src]="image.thumbnailUrl" />
+    </div>
+  </div>
+</div>
